@@ -1,0 +1,44 @@
+{
+    "comics": [
+        {
+            "id": 1,
+            "collection": "DC Essentiels",
+            "serie": " ALL-STAR Superman",
+            "volume": "0",
+            "title": "",
+            "authors": "Grant Morrison, Frank Quitley",
+            "image": "https://pictures.abebooks.com/isbn/9782365772563-us-300.jpg",
+            "comment": "Superman is strong."
+        },
+        {
+            "id": 2,
+            "collection": "DC",
+            "serie": "Batman",
+            "volume": "6",
+            "title": "Passé, présent, futur",
+            "authors": "Scott Snyder, Greg Capullo",
+            "cover": "https://pictures.abebooks.com/isbn/9782365776998-us-300.jpg",
+            "comment": "Batman is epic."
+        },
+        {
+            "id": 3,
+            "collection": "DC Rebirth",
+            "serie": "Nightwing",
+            "volume": "1",
+            "title": "Plus fort que Batman",
+            "authors": "Tim Seeley, Javier Fernandez",
+            "cover": "https://pictures.abebooks.com/isbn/9791026811541-us-300.jpg",
+            "comment": "Nightwing was Batman's sidekick."
+        },
+        {
+            "id": 4,
+            "collection": "DC Rebirth",
+            "serie": "Aquaman",
+            "volume": "1",
+            "title": "Eaux troubles",
+            "authors": "Kelly Sue DeConnick, Robson Rocha", 
+            "cover": "https://pictures.abebooks.com/isbn/9791026823438-us-300.jpg",
+            "comment": "Aquaman is the king of the seven seas."
+        }
+    ]
+}
