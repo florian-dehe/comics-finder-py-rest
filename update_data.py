@@ -1,6 +1,6 @@
-from service_readonly import COMICS_DATA_PATH
 import comic
 import filestream as fs
+import yaml
 
 # This program asks for a comic to add to the data set
 
@@ -9,7 +9,7 @@ COMICS_DATA_PATH = "comics_data.json"
 def ask_new_comic():
     print("==========================")
     print("Create a new comic entry :")
-    
+
     print("Collection : ", end="")
     collection = input()
 
@@ -35,12 +35,18 @@ def ask_new_comic():
     return comic.Comic(collection, serie, volume, title, authors, cover, comment)
 
 def main():
+    f = open("conf.yml")
+    conf_data = yaml.full_load(f)
+    f.close()
+
+    comics_data_path = conf_data["data_path"];
+
     obj = ask_new_comic()
 
-    data = fs.read_data_as_json(COMICS_DATA_PATH)
-    data["comics"].append(obj.save_to_json(len(data["comics"])+1))
+    json_data = fs.read_data_as_json(comics_data_path)
+    json_data["comics"].append(obj.save_to_json(len(json_data["comics"])+1))
 
-    fs.write_data_as_json(COMICS_DATA_PATH, data)
+    fs.write_data_as_json(comics_data_path, json_data)
 
 if __name__ == "__main__":
     main()

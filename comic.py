@@ -1,5 +1,4 @@
 
-
 #Comic obj used to describe a comic and save it as JSON.
 class Comic:
     def __init__(self, collection : str, serie : str, volume: str, title: str, authors : str, cover : str, comment :str):
