@@ -1,10 +1,17 @@
 from flask import Flask
 from flask_cors import CORS
 import filestream as fs
+import yaml
 
-COMICS_DATA_PATH = "comics_data.json"
+conf_filepath = "conf.yml"
 
-origin = "http://localhost:3000"
+f = open(conf_filepath, "r")
+conf_data = yaml.full_load(f)
+f.close()
+
+COMICS_DATA_PATH = conf_data["data_path"]
+
+origin = "http://localhost:" + str(conf_data["webapp_port"])
 
 app = Flask(__name__)
 CORS(app, resources={r"/comics": {"origins": origin } })
