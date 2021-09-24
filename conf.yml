@@ -1,3 +1,9 @@
-data_path: "comics_data.json"
-server_port: 4000
-webapp_port: 5000
+server:
+  server_port: 4000
+  webapp_address: "http://localhost:3000"
+database:
+  user: "root"
+  password: "comics_finder"
+  host: "127.0.0.1"
+  port: 3306
+  database: "comics_db"
